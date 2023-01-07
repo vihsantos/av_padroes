@@ -1,7 +1,9 @@
 package bridge;
 
-import java.util.Map;
-
 public interface Meio {
-    public String converter(Map<String, String> map);
+    public String gerarHeader();
+    public String gerarComentario(String value);
+    public String gerarNegrito(String value);
+    public String gerarItalico(String[] values);
+    public String gerarFooter();
 }
