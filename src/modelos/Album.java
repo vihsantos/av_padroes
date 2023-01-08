@@ -1,5 +1,9 @@
 package modelos;
 
+import java.util.Map;
+
+import visitor.Visitor;
+
 public class Album extends AbstractObra{
 
 	private String gravadora;
@@ -31,5 +35,11 @@ public class Album extends AbstractObra{
 
 	public String getEstudio() {
 		return estudio;
+	}
+
+	@Override
+	public Map<String, String> accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

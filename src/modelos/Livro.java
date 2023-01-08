@@ -1,5 +1,9 @@
 package modelos;
 
+import java.util.Map;
+
+import visitor.Visitor;
+
 public class Livro extends AbstractObra{
 
 	private String editora;
@@ -36,6 +40,12 @@ public class Livro extends AbstractObra{
 
 	public Integer getNumeroPaginas() {
 		return numeroPaginas;
+	}
+
+
+	@Override
+	public Map<String, String> accept(Visitor visitor) {
+		return visitor.visiteLivro(this);
 	}
 	
 
