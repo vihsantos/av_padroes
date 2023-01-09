@@ -1,9 +1,5 @@
 package modelos;
 
-import java.util.Map;
-
-import visitor.Visitor;
-
 public class Livro extends AbstractObra{
 
 	private String editora;
@@ -21,12 +17,11 @@ public class Livro extends AbstractObra{
 		this.autor = autor;
 		this.numeroPaginas = numeroPaginas;
 	}
-
+	
 
 	public String getEditora() {
 		return editora;
 	}
-
 
 	public String getIdioma() {
 		return idioma;
@@ -42,13 +37,16 @@ public class Livro extends AbstractObra{
 		return numeroPaginas;
 	}
 
-
 	@Override
-	public Map<String, String> accept(Visitor visitor) {
-		return visitor.visiteLivro(this);
+	public String toString() {
+		return "{Titulo = " + getTitulo() + "," +
+				"Ano " + "=" + getAno() + ","+
+				"Avaliação " + "=" + getAvaliacao() + ","+
+				"Editora " + "=" + getEditora() + ", "+
+				"Idioma " + "=" + getIdioma() + ","+
+				"Autor " + "=" + getAutor() + ","+
+				"NumeroPaginas" + "=" + getNumeroPaginas() + "}";
+		 
 	}
-	
-
-
 }
 
