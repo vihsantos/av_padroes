@@ -24,7 +24,7 @@ public class MeioLatex implements Meio {
 
     @Override
     public String gerarComplementos(String valor) {
-        return valor + "\n";
+        return valor;
     }
 
     @Override
