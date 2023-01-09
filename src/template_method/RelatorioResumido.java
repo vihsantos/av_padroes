@@ -22,7 +22,7 @@ public class RelatorioResumido extends TemplateRelatorio{
         for (Obra obra : this.obras) {
             this.meio.gerarComentario(obra.getTitulo());
             this.meio.gerarNegrito(obra.getTitulo());
-            this.meio.gerarItalico(new String[]{"", ""});
+            this.meio.gerarItalico("conteudo", "conteudo");
         }
         return conteudo;
     }

@@ -22,8 +22,8 @@ public class RelatorioCompleto extends TemplateRelatorio{
         for (Obra obra : this.obras) {
             this.meio.gerarComentario(obra.getTitulo());
             this.meio.gerarNegrito(obra.getTitulo());
-            this.meio.gerarItalico(new String[]{"", ""});
-            this.meio.gerarComplementos(null);
+            this.meio.gerarItalico("conteudo", "conteudo");
+            this.meio.gerarComplementos("conteudo", "conteudo");
         }
         return conteudo;
     }
