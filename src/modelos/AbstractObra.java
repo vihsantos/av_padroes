@@ -13,8 +13,6 @@ public abstract class AbstractObra implements Obra{
 		this.avaliacao = avaliacao;
 	}
 	
-	public abstract String toString();
-	
 	@Override
 	public String getTitulo() {
 		return titulo;

@@ -6,7 +6,7 @@ import modelos.Album;
 import modelos.Livro;
 
 public interface Visitor {
-	Map<String, String> visiteLivro(Livro livro);
+	public void visiteLivro(Livro livro);
 	
-	Map<String, String> visiteAlbum(Album album);
+	public void visiteAlbum(Album album);
 }

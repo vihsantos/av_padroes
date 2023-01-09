@@ -1,5 +1,7 @@
 package modelos;
 
+import visitor.Visitor;
+
 public class Livro extends AbstractObra{
 
 	private String editora;
@@ -37,16 +39,10 @@ public class Livro extends AbstractObra{
 		return numeroPaginas;
 	}
 
+
 	@Override
-	public String toString() {
-		return "{Titulo = " + getTitulo() + "," +
-				"Ano " + "=" + getAno() + ","+
-				"Avaliação " + "=" + getAvaliacao() + ","+
-				"Editora " + "=" + getEditora() + ", "+
-				"Idioma " + "=" + getIdioma() + ","+
-				"Autor " + "=" + getAutor() + ","+
-				"NumeroPaginas" + "=" + getNumeroPaginas() + "}";
-		 
+	public void accept(Visitor visitor) {
+		visitor.visiteLivro(this);
 	}
 }
 

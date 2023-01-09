@@ -20,9 +20,9 @@ public class RelatorioResumido extends TemplateRelatorio{
     public String gerarConteudo() {
         String conteudo = "";
         for (Obra obra : this.obras) {
-            this.meio.gerarComentario(obra.getTitulo());
-            this.meio.gerarNegrito(obra.getTitulo());
-            this.meio.gerarItalico("conteudo", "conteudo");
+            conteudo += this.meio.gerarComentario(obra.getTitulo()) +
+            this.meio.gerarNegrito(obra.getTitulo())+
+            this.meio.gerarItalico(obra.getAutor(),obra.getAno().toString()) + "\n";
         }
         return conteudo;
     }

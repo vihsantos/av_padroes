@@ -5,6 +5,6 @@ public interface Meio {
     public String gerarComentario(String value);
     public String gerarNegrito(String value);
     public String gerarItalico(String value1, String value2);
-    public String gerarComplementos(String label, String valor);
+    public String gerarComplementos(String valor);
     public String gerarFooter();
 }

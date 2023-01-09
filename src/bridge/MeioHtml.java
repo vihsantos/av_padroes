@@ -23,8 +23,8 @@ public class MeioHtml implements Meio{
     }
 
     @Override
-    public String gerarComplementos(String label, String valor) {
-        return label + ": " + valor + "\n";
+    public String gerarComplementos(String valor) {
+        return valor + "\n";
     }
         
     @Override
