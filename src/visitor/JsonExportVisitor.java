@@ -40,7 +40,11 @@ public class JsonExportVisitor implements Visitor {
 		this.json += "\n}\n";
 	}
 	
-	public String getJson() {
-		return this.json;
+	public String getXML() {
+		String export = json;
+		
+		json = "";
+		
+		return export;
 	}
 }

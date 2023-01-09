@@ -38,6 +38,10 @@ public class XMLExportVisitor implements Visitor {
 	}
 	
 	public String getXML() {
-		return this.xml;
+		String export = xml;
+		
+		xml = "";
+		
+		return export;
 	}
 }
