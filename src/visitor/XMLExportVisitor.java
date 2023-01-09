@@ -4,44 +4,40 @@ import modelos.Album;
 import modelos.Livro;
 
 public class XMLExportVisitor implements Visitor {
-	private String json;
+	private String xml;
 	
 	public XMLExportVisitor(){
-		this.json = "";
+		this.xml = "";
 	}
 
 	@Override
 	public void visiteLivro(Livro livro) {
-        json += "<"+ livro.getClass().getSimpleName() +">\n"; 
+        xml += "<livro titulo= " + "\"" + livro.getTitulo() + "\"" + " ano = " + "\"" + livro.getAno().toString() + "\"" + ">"; 
         
-        json += "<Titulo>" + livro.getTitulo() + "<Titulo>" + "\n" +
-        		"<Ano>" + livro.getAno().toString() + "<Ano>" + "\n" +
-        		"<Avaliacao>" + livro.getAvaliacao().toString() + "<Avaliacao>" + "\n" +
-        		"<Editora>" + livro.getEditora() + "<Editora>" + "\n" +
-        		"<Idioma>" + livro.getIdioma() + "<Idioma>" + "\n" +
-        		"<Autor>" + livro.getAutor() + "<Autor>" + "\n" +
-        		"<numeroPaginas>" + livro.getNumeroPaginas().toString() + "<numeroPaginas>" + "\n";
+        xml +=  "<avaliacao>" + livro.getAvaliacao().toString() + "</avaliacao>" + "\n" +
+        		"<editora>" + livro.getEditora() + "</editora>" + "\n" +
+        		"<idioma>" + livro.getIdioma() + "</idioma>" + "\n" +
+        		"<autor>" + livro.getAutor() + "</autor>" + "\n" +
+        		"<num_paginas>" + livro.getNumeroPaginas().toString() + "</num_paginas>" + "\n";
 
-        json += "<"+ livro.getClass().getSimpleName() +">";
+		xml += "</livro>\n";
         
 	}
 
 	@Override
 	public void visiteAlbum(Album album) {
-		json += "<"+ album.getClass().getSimpleName() +">\n"; 
-		
-		json += "<Titulo>" + album.getTitulo() + "<Titulo>" + "\n" +
-        		"<Ano>" + album.getAno().toString() + "<Ano>" + "\n" +
-        		"<Avaliacao>" + album.getAvaliacao().toString() + "<Avaliacao>" + "\n" +
-        		"<Gravadora>" + album.getGravadora() + "<Gravadora>" + "\n" +
-        		"<Autor>" + album.getAutor() + "<Autor>" + "\n" +
-        		"<Duracao>" + album.getDuracao().toString() + "<Duracao>" + "\n" +
-        		"<Estudio>" + album.getEstudio() + "<Estudio>" + "\n";
-		
-		json += "<"+ album.getClass().getSimpleName() +">";
+		xml += "<album titulo= " + "\"" + album.getTitulo() + "\"" + " ano = " + "\"" + album.getAno().toString() + "\"" + ">"; 
+        
+        xml +=  "<avaliacao>" + album.getAvaliacao().toString() + "</avaliacao>" + "\n" +
+        		"<estudio>" + album.getEstudio() + "</estudio>" + "\n" +
+        		"<gravadora>" + album.getGravadora() + "</gravadora>" + "\n" +
+        		"<autor>" + album.getAutor() + "</autor>" + "\n" +
+        		"<duracao>" + album.getDuracao().toString() + "</duracao>" + "\n";
+
+		xml += "</album>\n";
 	}
 	
-	public String getJson() {
-		return this.json;
+	public String getXML() {
+		return this.xml;
 	}
 }

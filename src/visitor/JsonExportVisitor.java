@@ -14,15 +14,14 @@ public class JsonExportVisitor implements Visitor {
 	public void visiteLivro(Livro livro) {
         this.json += "{\n"; 
         
-        this.json += " \"Titulo\" :" + "\"" + livro.getTitulo() + "\"" + "," + "\n" +
-        		" \"Ano\" :" + "\"" + livro.getAno().toString() + "\"" + "," + "\n" +
-        		" \"Avaliação\" :" + "\"" + livro.getAvaliacao().toString() + "\"" + "," + "\n" +
-        		" \"Editora\" :" + "\"" + livro.getEditora() + "\"" + "," + "\n" +
-        		" \"Idioma\" :" + "\"" + livro.getIdioma() + "\"" + "," + "\n" +
-        		" \"Autor\" :" + "\"" + livro.getAutor() + "\"" + "," + "\n" +
-        		" \"Numero de Páginas\" :" + "\"" + livro.getNumeroPaginas().toString() + "\"";
+        this.json += " \"titulo\" : " + "\"" + livro.getTitulo() + "\"" + "," + "\n" +
+        		" \"avaliação\" : "  + livro.getAvaliacao().toString()  + "," + "\n" +
+        		" \"editora\" : "  + livro.getEditora()  + "," + "\n" +
+        		" \"idioma\" : "  + livro.getIdioma()  + "," + "\n" +
+        		" \"autor\" : "  + livro.getAutor()  + "," + "\n" +
+        		" \"num_paginas\" : "  + livro.getNumeroPaginas().toString() ;
 
-        this.json += "\n}";
+        this.json += "\n}\n";
         
 	}
 
@@ -30,15 +29,15 @@ public class JsonExportVisitor implements Visitor {
 	public void visiteAlbum(Album album) {
 		this.json += "{\n"; 
 		
-		this.json += " \"Titulo\" :" + "\"" + album.getTitulo() + "\"" + "," + "\n" +
-        		" \"Ano\" :" + "\"" + album.getAno().toString() + "\"" + "," + "\n" +
-        		" \"Avaliação\" :" + "\"" + album.getAvaliacao().toString() + "\"" + "," + "\n" +
-        		" \"Gravadora\" :" + "\"" + album.getGravadora() + "\"" + "," + "\n" +
-        		" \"Autor\" :" + "\"" + album.getAutor() + "\"" + "," + "\n" +
-        		" \"Duração\" :" + "\"" + album.getDuracao() + "\"" + "," + "\n" +
-        		" \"Estudio\" :" + "\"" + album.getEstudio() + "\"";
+		this.json += " \"titulo\" : " + "\"" + album.getTitulo() + "\"" + "," + "\n" +
+        		" \"avaliacao\" : " +  album.getAvaliacao().toString() +  "," + "\n" +
+				" \"estudio\" : " + album.getEstudio()  + "," + "\n"+
+        		" \"gravadora\" : "  + album.getGravadora()  + "," + "\n" +
+        		" \"autor\" : "  + album.getAutor()  + "," + "\n" +
+        		" \"duracao\" : " +  album.getDuracao() + "," 
+        		;
 		
-		this.json += "\n}";
+		this.json += "\n}\n";
 	}
 	
 	public String getJson() {

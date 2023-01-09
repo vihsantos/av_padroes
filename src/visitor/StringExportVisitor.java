@@ -13,17 +13,17 @@ public class StringExportVisitor implements Visitor {
 	
 	@Override
 	public void visiteLivro(Livro livro) {
-        string += "Editora = " + livro.getEditora() + ",\n" +
-        		"NumeroPaginas = " + livro.getNumeroPaginas().toString() + ",\n" +
-				"Avaliação = " + livro.getAvaliacao() + "\n";
+        string += "Editora: " + livro.getEditora() + "\n" +
+        		"Numero de Páginas: " + livro.getNumeroPaginas().toString() + "\n" +
+				"Avaliação: " + livro.getAvaliacao() + "\n";
 
 	}
 
 	@Override
 	public void visiteAlbum(Album album) {
-		string += "Gravadora = " + album.getGravadora() + ",\n" +
-        		"Estudio = " + album.getEstudio() + ",\n" +
-				"Avaliação = " + album.getAvaliacao() + "\n";
+		string += "Gravadora: " + album.getGravadora() + "\n" +
+        		"Estúdio: " + album.getEstudio() + "\n" +
+				"Avaliação: " + album.getAvaliacao() + "\n";
 	}
 	
 	public String getString() {
