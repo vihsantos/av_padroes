@@ -2,8 +2,6 @@ package modelos;
 
 import java.util.Map;
 
-import visitor.Visitor;
-
 public class Album extends AbstractObra{
 
 	private String gravadora;
@@ -37,9 +35,20 @@ public class Album extends AbstractObra{
 		return estudio;
 	}
 
+//	@Override
+//	public Map<String, String> accept(Visitor visitor) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
 	@Override
-	public Map<String, String> accept(Visitor visitor) {
-		// TODO Auto-generated method stub
-		return null;
+	public String toString() {
+		return"{Titulo = " + getTitulo() + "," +
+				"Ano " + "=" + getAno() + ","+
+				"Avaliação " + "=" + getAvaliacao() + ","+
+				"Gravadora" + "=" + getGravadora() + ", "+
+				"Autor " + "=" + getAutor() + ","+
+				"Duração " + "=" + getDuracao() + ","+
+				"Estudio" + "=" + getEstudio() + "}";
 	}
 }
