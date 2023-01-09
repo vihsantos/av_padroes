@@ -9,24 +9,22 @@ public class MeioLatex implements Meio {
 
     @Override
     public String gerarComentario(String value) {
-        return "% "+ value;
+        return "% "+ value + "\n";
     }
 
     @Override
     public String gerarNegrito(String value) {
-        return "\\textbf{" + value + "}";
+        return "\\textbf{" + value + "} \n";
     }
 
     @Override
-    public String gerarItalico(String[] values) {
-        return "\\emph{" + values[0] +" "+  values[1] + "}";
+    public String gerarItalico(String valor1, String valor2) {
+        return "\\emph{" + valor1 +" "+  valor2 + "}\n";
     }
 
     @Override
-    public String gerarComplementos(String[] values) {
-        return values[0] + ": " + values[1] + "\n" 
-                +values[2] + ": " + values[3] + "\n" 
-                + values[4] + ": " + values[5] + "\n";
+    public String gerarComplementos(String label, String valor) {
+        return label + ": " + valor + "\n";
     }
 
     @Override

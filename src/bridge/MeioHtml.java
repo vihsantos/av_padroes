@@ -1,6 +1,6 @@
 package bridge;
 
-class MeioHtml implements Meio{
+public class MeioHtml implements Meio{
 
     @Override
     public String gerarHeader() {
@@ -18,15 +18,13 @@ class MeioHtml implements Meio{
     }
 
     @Override
-    public String gerarItalico(String[] values) {
-        return "<italic>" + values[0] + " " + values[1] + "</italic>\n";
+    public String gerarItalico(String valor1, String valor2) {
+        return "<italic>" + valor1 + " " + valor2 + "</italic>\n";
     }
 
     @Override
-    public String gerarComplementos(String[] values) {
-        return values[0] + ": " + values[1] + "\n" 
-                +values[2] + ": " + values[3] + "\n" 
-                + values[4] + ": " + values[5] + "\n";
+    public String gerarComplementos(String label, String valor) {
+        return label + ": " + valor + "\n";
     }
         
     @Override
