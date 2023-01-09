@@ -29,7 +29,7 @@ public class RelatorioCompleto extends TemplateRelatorio{
             conteudo += this.meio.gerarComentario(obra.getTitulo())+
             this.meio.gerarNegrito(obra.getTitulo())+
             this.meio.gerarItalico(obra.getAutor(),obra.getAno().toString())+
-            this.meio.gerarComplementos(visitor.getString()) + "\n";
+            this.meio.gerarComplementos(visitor.getString());
         }
         return conteudo;
     }
